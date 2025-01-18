@@ -1,7 +1,9 @@
 const express = require('express');
 const app = express();
+const cors=require('cors');
 app.use(express.json());
 //llama
+app.use(cors());
 const Groq = require('groq-sdk');
 
 const groq = new Groq({
